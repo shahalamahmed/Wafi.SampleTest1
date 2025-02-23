@@ -156,7 +156,7 @@ namespace Wafi.SampleTest.Controllers
 
             if (conflictDates.Any())
             {
-                return BadRequest($"The car is already booked on: {string.Join(", ", conflictDates)}");
+                return BadRequest($"This car is already booked for the same date and time: {string.Join(", ", conflictDates)}");
             }
 
             var bookingsToAdd = new List<Booking>();
